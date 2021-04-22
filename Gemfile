@@ -60,6 +60,7 @@ group :test do
   gem 'webdrivers'
 
   gem 'rails-controller-testing'
+  gem 'email_spec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
