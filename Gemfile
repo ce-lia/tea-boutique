@@ -39,6 +39,7 @@ group :development, :test do
   gem 'cucumber-rails', require:false
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'email_spec'
 end
 
 group :development do
@@ -60,7 +61,6 @@ group :test do
   gem 'webdrivers'
 
   gem 'rails-controller-testing'
-  gem 'email_spec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
