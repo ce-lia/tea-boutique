@@ -39,6 +39,7 @@ group :development, :test do
   gem 'cucumber-rails', require:false
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'email_spec'
 end
 
 group :development do
