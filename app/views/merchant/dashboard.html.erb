@@ -1,0 +1,5 @@
+<% if merchant_signed_in? %>
+  <li>
+    <%= link_to('Log out', destroy_merchant_session_path, method: :delete) %>
+  </li>
+<% end %>
