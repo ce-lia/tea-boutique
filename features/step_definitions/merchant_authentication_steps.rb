@@ -9,17 +9,15 @@ Given('I visit my dashboard') do
 end
 
 When('I fill in the dashboard login form') do
-  click_button 'Log in'
-  fill_in 'email_log', with: 'tester@testdomain.test'
-  fill_in 'password_log', with: 'pa$$word'
+  fill_in 'email_log_merch', with: 'tester@testdomain.test'
+  fill_in 'password_log_merch', with: 'pa$$word'
   click_button 'Log in'
 end
 
 Given('I am logged in as a merchant') do
   visit dashboard_path
-  click_button 'Log in'
-  fill_in 'email_log', with: 'tester@testdomain.test'
-  fill_in 'password_log', with: 'pa$$word'
+  fill_in 'email_log_merch', with: 'tester@testdomain.test'
+  fill_in 'password_log_merch', with: 'pa$$word'
   click_button 'Log in'
 end
 

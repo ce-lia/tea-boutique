@@ -1,13 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe WarehouseController do
-  let(:merchant) { instance_double(Merchant) }
-  before { log_in(merchant) }
 
   describe 'GET #dashboard' do
-    it 'returns status ok' do
-      get :dashboard
-      expect(response.status).to be(200)
+    context "when the merchant is signed in" do
+      login_merchant
+      it 'returns status ok' do
+        get :dashboard
+        expect(response.status).to eq(200)
+      end
+    end
+    context "when a client is signed in" do
+      login_client
+      it 'redirects to home page' do
+        get :dashboard
+        expect(response.body).to include(root_path)
+      end
     end
   end
 end

@@ -1,6 +1,6 @@
-class WarehousePolicy  < Struct.new(:merchant, :warehouse)
+class WarehousePolicy < ApplicationPolicy
+
   def dashboard?
-    return false unless merchant.instance_of?(Merchant)
-    true
+    return true if user.instance_of?(Merchant)
   end
 end
